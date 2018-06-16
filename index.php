@@ -4,6 +4,9 @@
     define('API_CTRLS_DIR', __DIR__ . "/api");
     define('VIEWS_DIR', __DIR__ . "/views");
     define('CTRLS_DIR', __DIR__ . "/controllers");
+
+    $conn = MyConnection(); die();
+
     if (startsWith($_SERVER["REQUEST_URI"], '/api/')) {
         $apiRouter = new \core\Api\Api();
         // Start Api Route Setup
@@ -18,3 +21,4 @@
         // End Route View Setup
         $router->loadView($_SERVER["REQUEST_URI"]);
     }
+
