@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es-MX">
+<?php include(VIEWS_DIR . "/partials/head.phtml"); ?>
+<body>
+<?php include(VIEWS_DIR . "/partials/header.phtml"); ?>
+<main class="container">
+    <h1>Agregar usuarios</h1>
+    <form action="/add-user-success" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="user_name">Nombre del usuario</label>
+            <input type="text" required
+                   class="form-control"
+                   id="user_name"
+                   name="user_name"
+                   placeholder="Ingresa el nombre del usuario" />
+        </div>
+        <div class="form-group">
+            <label for="user_name">Password del usuario</label>
+            <input type="text" required
+                   class="form-control"
+                   id="user_psw"
+                   name="user_psw"
+                   placeholder="Ingresa el nombre del usuario" />
+        </div>
+        <div class="form-group">
+            <label for="user_address">Dirección del usuario</label>
+            <input type="text" required
+                   class="form-control"
+                   id="user_address"
+                   name="user_address"
+                   placeholder="Ingresa el nombre del usuario" />
+        </div>
+        <div class="form-group">
+            <label for="user_mail">Email del usuario</label>
+            <input type="text" required
+                   class="form-control"
+                   id="user_mail"
+                   name="user_mail"
+                   placeholder="Ingresa el nombre del usuario" />
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+</main>
+<?php include(VIEWS_DIR . "/partials/footer.phtml"); ?>
+<?php include(VIEWS_DIR . "/partials/scripts.phtml"); ?>
+</body>
+</html>

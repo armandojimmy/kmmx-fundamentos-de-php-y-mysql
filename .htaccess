@@ -1,7 +1,15 @@
 <IfModule mod_rewrite.c>
+    # Start Env variables
+    SetEnv MYSQL_SERVER localhost
+    SetEnv MYSQL_USERNAME armando
+    SetEnv MYSQL_PASSWORD jimmy
+    SetEnv MYSQL_DATABASE ecommerce
+    SetEnv SALT privatekey_encript_example
+    # End Env variables
     RewriteEngine on
     AddHandler php-script .php .php5 .php4 .php3 .html .htm .phtml
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ /index.php?path=$1 [NC,L,QSA]
 </IfModule>
+
